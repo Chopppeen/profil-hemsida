@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.rubrik{
+    text-align: center;
+    background-color: aliceblue;
+    padding: 20px;  
+    padding-bottom: 8px;
+}
+
+.nav-bar{
+    background-color: aliceblue;
+    padding: 15px;
+}
+
+.nav-links{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: gray;
+    
+}
+
+a{
+    color: grey;
+    text-decoration: none;
+}
+
+a:hover{
+    color:black;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+}
+
+.Välkommen-text{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    width: 700px;
+}
+
+.Om-mig-rubrik{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 25px;
+}
