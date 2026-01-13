@@ -10,6 +10,16 @@
     padding-bottom: 8px;
 }
 
+.profilbild{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 0 auto;
+}
+
 .nav-bar{
     background-color: aliceblue;
     padding: 15px;
@@ -47,4 +57,12 @@ a:hover{
     text-align: center;
     margin-top: 80px;
     font-size: 25px;
+}
+
+.om-mig-text{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 18px;
+    width: 600px;
 }
