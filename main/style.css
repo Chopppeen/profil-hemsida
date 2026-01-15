@@ -12,7 +12,7 @@
 
 .profilbild{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: right;
     width: 45px;
     border-radius: 50%;
@@ -65,4 +65,19 @@ a:hover{
     margin-top: 20px;
     font-size: 18px;
     width: 600px;
+}
+
+.Vad-vi-gjort-rubrik{
+    text-align: center;
+    padding-top: 80px;
+    margin-top: 20px;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.vad-vi-gjort{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 18px;
 }
