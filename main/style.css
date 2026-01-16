@@ -1,6 +1,20 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode{
+    background-color:#363636;
+    color: white;
 }
 
 .rubrik{
@@ -8,17 +22,25 @@
     background-color: aliceblue;
     padding: 20px;  
     padding-bottom: 8px;
+    max-width: 100%;
 }
 
 .profilbild{
     display: flex;
     flex-direction: column;
     justify-content: right;
-    width: 45px;
+    max-width: 45px;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     margin-top: 0 auto;
 }
+.darkmodebutton{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 
 .nav-bar{
     background-color: aliceblue;
@@ -35,7 +57,7 @@
 }
 
 a{
-    color: grey;
+    color: #545454;
     text-decoration: none;
 }
 
@@ -50,7 +72,8 @@ a:hover{
     text-align: center;
     margin-top: 50px;
     font-size: 20px;
-    width: 700px;
+    max-width: 600px;
+    width: 100%;
 }
 
 .Om-mig-rubrik{
@@ -63,8 +86,21 @@ a:hover{
     text-align: center;
     margin: 0 auto;
     margin-top: 20px;
+    font-size: 18px;;
+    max-width: 600px;
+    width: 100%;
+}
+
+.intressen-lista-rubrik{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.intressen-lista{
+    text-align: center;
+    margin-top: 5px;
     font-size: 18px;
-    width: 600px;
 }
 
 .Vad-vi-gjort-rubrik{
@@ -84,10 +120,14 @@ a:hover{
 
 .footer{
     text-align: center;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
     padding: 10px;
     margin-top: 50px;
     font-size: 14px;
+}
+
+footer.dark-mode{
+    background-color: #1e1e1e;
 }
 
 .kontakt{
@@ -96,4 +136,15 @@ a:hover{
     flex-direction: row;
     justify-content: center;
     gap: 10px;
+}
+
+@media (max-width: 600px){
+    .nav-links{
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .Välkommen-text, .om-mig-text, .vad-vi-gjort{
+        padding: 0 10px;
+    }
 }
