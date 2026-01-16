@@ -9,7 +9,7 @@ toggleButton.addEventListener('click', () => {
     nav.classList.toggle('dark-mode');
     footer.classList.toggle('dark-mode');
 
-/*jag trodde ärligt att det här inte skulle funka men W*/
+/*jag trodde ärligt inte att det skulle funka men WWWW*/
 if (document.body.classList.contains('dark-mode')) {
     toggleButton.textContent = '☀️Ljust läge';
 } else {

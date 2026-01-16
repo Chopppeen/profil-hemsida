@@ -10,6 +10,13 @@ body{
     background-color: white;
     color: black;
     transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
 }
 
 body.dark-mode{
@@ -154,7 +161,15 @@ a:hover{
         gap: 10px;
     }
 
-    .Välkommen-text, .om-mig-text, .vad-vi-gjort{
+    .Välkommen-text{
+        padding: 0 10px;
+    }
+    
+    .om-mig-text{
+        padding: 0 10px;
+    }
+
+    .vad-vi-gjort{
         padding: 0 10px;
     }
 }
