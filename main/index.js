@@ -15,3 +15,8 @@ if (document.body.classList.contains('dark-mode')) {
 } else {
     toggleButton.textContent = '🌙Mörkt läge';
 }});
+
+/* Copyright year updater*/
+const yearSpan = document.getElementById('currentYear');
+const currentYear = new Date().getFullYear();
+yearSpan.textContent = currentYear;
