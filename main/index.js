@@ -1,4 +1,4 @@
-function toggleDarkMode(){
+function toggleDarkMode(){ //dark mode toggle//
     document.body.classList.toggle("dark-mode");
     document.querySelector('.rubrik').classList.toggle("dark-mode");
     document.querySelector('.nav-bar').classList.toggle("dark-mode");
@@ -8,6 +8,21 @@ function toggleDarkMode(){
         localStorage.setItem("theme", "dark");
     } else {
         localStorage.setItem("theme", "light");
+    }
+
+    localStorage.setItem("theme", "dark");
+    localStorage.setItem("lastVisit", Date.now());
+    const FIVE_MINUTES = 1000 * 60 * 5;
+
+    if (lastVisit) {
+        const now = Date.now();
+        const timePassed = now - lastVisit;
+
+        if (timePassed > FIVE_MINUTES) {
+            localStorage.removeItem("theme");
+            localStorage.removeItem("lastVisit");
+        }
+
     }
 
     const toggleButton = document.querySelector('.darkmodebutton');
@@ -33,7 +48,17 @@ function loadTheme(){
 
 loadTheme();
 
-/*Copyright year updater*/
+//Copyright year updater//
 const yearSpan = document.getElementById('currentYear');
 const currentYear = new Date().getFullYear();
 yearSpan.textContent = currentYear;
+
+//hamburger menu//
+const menuOpenButton = document.getElementById('menu-open');
+const menuCloseButton = document.getElementById('menu-close');
+const navBar = document.querySelector('.nav-bar');
+
+menuOpenButton.addEventListener('click', () => {
+    menuOpenButton.classList.add('hidden');
+    menuCloseButton.classList.add('visible');
+});

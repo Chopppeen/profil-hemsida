@@ -47,6 +47,22 @@ body.dark-mode{
     object-fit: cover;
     margin-top: 0 auto;
 }
+
+.menu-button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    max-width: 25px;
+}
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
 .darkmodebutton{
     border: none;
     background-color: transparent;
