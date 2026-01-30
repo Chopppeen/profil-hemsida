@@ -59,10 +59,6 @@ body.dark-mode{
     display: none;
 }
 
-.visible{
-    display: block;
-}
-
 .darkmodebutton{
     border: none;
     background-color: transparent;
@@ -148,6 +144,12 @@ a:hover{
     margin: 0 auto;
     margin-top: 20px;
     font-size: 18px;
+}
+
+.Contact-webb{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
 }
 
 .footer{

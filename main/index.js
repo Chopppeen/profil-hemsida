@@ -1,4 +1,4 @@
-function toggleDarkMode(){ //dark mode toggle//
+function toggleDarkMode(){
     document.body.classList.toggle("dark-mode");
     document.querySelector('.rubrik').classList.toggle("dark-mode");
     document.querySelector('.nav-bar').classList.toggle("dark-mode");
@@ -10,8 +10,7 @@ function toggleDarkMode(){ //dark mode toggle//
         localStorage.setItem("theme", "light");
     }
 
-    localStorage.setItem("theme", "dark");
-    localStorage.setItem("lastVisit", Date.now());
+    const lastVisit = Number(localStorage.getItem("lastVisit"));
     const FIVE_MINUTES = 1000 * 60 * 5;
 
     if (lastVisit) {
@@ -22,14 +21,15 @@ function toggleDarkMode(){ //dark mode toggle//
             localStorage.removeItem("theme");
             localStorage.removeItem("lastVisit");
         }
-
     }
+
+    localStorage.setItem("lastVisit", Date.now());
 
     const toggleButton = document.querySelector('.darkmodebutton');
     if (document.body.classList.contains('dark-mode')) {
-        toggleButton.textContent = '☀️Ljust läge';
+        toggleButton.textContent = '💡';
     } else {
-        toggleButton.textContent = '🌙Mörkt läge';
+        toggleButton.textContent = '🌑';
     }
 }
 
@@ -42,7 +42,9 @@ function loadTheme(){
         document.querySelector('.rubrik').classList.add("dark-mode");
         document.querySelector('.nav-bar').classList.add("dark-mode");
         document.querySelector('.footer').classList.add("dark-mode");
-        document.querySelector('.darkmodebutton').textContent = '☀️Ljust läge';
+        document.querySelector('.darkmodebutton').textContent = '💡';
+    } else {
+        document.querySelector('.darkmodebutton').textContent = '🌑';
     }
 }
 
@@ -53,12 +55,49 @@ const yearSpan = document.getElementById('currentYear');
 const currentYear = new Date().getFullYear();
 yearSpan.textContent = currentYear;
 
-//hamburger menu//
-const menuOpenButton = document.getElementById('menu-open');
-const menuCloseButton = document.getElementById('menu-close');
-const navBar = document.querySelector('.nav-bar');
 
-menuOpenButton.addEventListener('click', () => {
-    menuOpenButton.classList.add('hidden');
-    menuCloseButton.classList.add('visible');
+
+// hämta element 
+const form = document.querySelector("#contactForm"); 
+const successP = document.querySelector("#success"); 
+
+ 
+// hämta värden från formulär 
+const nameInput = document.querySelector("#name"); 
+const messageInput = document.querySelector("#message"); 
+
+form.addEventListener("submit", function(event) { 
+
+  // stoppar sidans omladdning   
+  event.preventDefault(); 
+ 
+
+    // .value innehåller det användaren skrivit 
+  const name = nameInput.value; 
+
+  const message = messageInput.value; 
+
+ 
+
+// Validering för att kontrollera tomma fält   
+if (name === "" || message === "") { 
+
+    successP.textContent = "Fyll i alla fält!"; 
+
+    successP.style.color = "red"; 
+
+    return; 
+
+  } 
+
+// console.log används för att kontrollera att rätt data hämtas   
+console.log(name, message); 
+ 
+
+  // bekräftelsemeddelande visas för användaren 
+  successP.textContent = "Tack! Meddelandet skickades."; 
+
+  successP.style.color = "green"; 
+
 });
+

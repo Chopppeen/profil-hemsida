@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+
+<html lang="sv"> 
+
+<head> 
+
+  <meta charset="UTF-8"> 
+
+  <title>Kontaktformulär</title> 
+
+  <link rel="stylesheet" href="style.css">
+
+</head> 
+
+<body> 
+    <header class="rubrik">
+        <h1>Kontakta mig</h1>
+        
+        <button class="darkmodebutton" id="darkModeToggle">🌙Dark Mode</button>
+    </header>
+    <nav class="nav-bar"> 
+        <ul class="nav-links">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+<main class="Contact-webb">
+    <form id="contactForm"> 
+
+  <label for="name">Namn:</label> 
+
+  <input type="text" id="name" placeholder="Ditt namn"> 
+ 
+
+  <label for="message">Meddelande:</label> 
+
+  <textarea id="message" placeholder="Skriv ditt meddelande här"></textarea> 
+
+  <button type="submit">Skicka</button> 
+</form> 
+
+    <p id="success"></p> 
+
+</main>
+
+    <footer class="footer">
+        <p class="copyright">
+            © <span id="currentYear">2026</span> Samuel. Copyright aaaaaaaaaaaaaaaaaaaaaa!
+        </p>
+
+        <div class="kontakt" id="kontakt">
+            <p><a href="tel:+46723413429">Ring mig</a></p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body> 
+
+</html>
