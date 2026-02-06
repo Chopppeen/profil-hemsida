@@ -26,22 +26,42 @@
         </ul>
     </nav>
 <main class="Contact-webb">
-    <form id="contactForm"> 
 
-  <label for="name">Namn:</label> 
+<form id="contactForm"> 
 
-  <input type="text" id="name" placeholder="Ditt namn"> 
- 
+    <label for="name">Namn:</label> 
+        <input type="text" id="name" required placeholder="Ditt Namn">
 
-  <label for="message">Meddelande:</label> 
+    <label for="email">E-post:</label> 
+        <input type="email" id="email" required placeholder="E-post">
 
-  <textarea id="message" placeholder="Skriv ditt meddelande här"></textarea> 
+    <label for="message">Meddelande:</label> 
+        <textarea id="message" required maxlength="250" placeholder="Skriv ditt meddelande här..."></textarea>
 
-  <button type="submit">Skicka</button> 
+    <label for="subject">Ämne:</label>
+
+    <select id="subject" required>
+        <option value="välj Ämne">välj Ämne</option>
+        <option value="Fråga">Fråga</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Annat">Annat</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="terms" required>
+        Jag godkänner <a href="terms.html">villkoren</a>
+    </label>
+
+    <button type="submit">Skicka</button> 
 </form> 
+    <div id="errorMessages" style="color: red;"></div>
 
     <p id="success"></p> 
 
+    <input type="text" required minlength="2" maxlength="50" pattern="^[a-zA-ZåäöÅÄÖ\s]+$">
+
+    <input type="email" required>
+    <textarea required maxlength="250"></textarea>
 </main>
 
     <footer class="footer">

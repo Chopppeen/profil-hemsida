@@ -94,10 +94,50 @@ if (name === "" || message === "") {
 console.log(name, message); 
  
 
-  // bekräftelsemeddelande visas för användaren 
+
   successP.textContent = "Tack! Meddelandet skickades."; 
 
   successP.style.color = "green"; 
 
 });
 
+
+const form = document.getElementById("contactForm");
+const errorDiv = document.getElementById("errorMessages");
+
+form.addEventListener("submit", function(event) {
+
+    errorDiv.innerHTML = "";// Rensa tidigare fel
+    let errors = [];
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const terms = document.getElementById("terms").checked;
+
+    if (!/^[a-zA-ZåäöÅÄÖ\s]+$/.test(name) || name.length < 2 || name.length > 50) {
+        errors.push("Namn måste vara 2-50 tecken.");
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errors.push("E-postadressen är ogiltig.");
+    }
+
+    if (message.length < 10 || message.length > 250) {
+        errors.push("Meddelandet måste vara mellan 10 och 250 tecken.");
+    }
+
+    if (subject === "") {
+        errors.push("välj ett ämne.");
+    }
+
+    if (!terms) {
+        errors.push("Du måste godkänna villkoren.");
+    }
+
+    if (errors.length > 0) {
+        errorDiv.innerHTML = errors.map(error => `<p>${error}</p>`).join("");
+        event.preventDefault();
+    }
+});

@@ -147,7 +147,9 @@ a:hover{
 }
 
 .Contact-webb{
-    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
     font-size: 20px;
 }
@@ -171,6 +173,15 @@ a:hover{
     flex-direction: row;
     justify-content: center;
     gap: 10px;
+}
+
+.terms{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    font-size: 5rem;
 }
 
 @media (max-width: 600px){
