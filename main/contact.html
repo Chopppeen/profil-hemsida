@@ -30,13 +30,13 @@
 <form id="contactForm"> 
 
     <label for="name">Namn:</label> 
-        <input type="text" id="name" required placeholder="Ditt Namn">
+        <input type="text" id="name" placeholder="Ditt Namn">
 
     <label for="email">E-post:</label> 
-        <input type="email" id="email" required placeholder="E-post">
+        <input type="email" id="email" placeholder="E-post">
 
     <label for="message">Meddelande:</label> 
-        <textarea id="message" required maxlength="250" placeholder="Skriv ditt meddelande här..."></textarea>
+        <textarea id="message" maxlength="250" placeholder="Skriv ditt meddelande här..."></textarea>
 
     <label for="subject">Ämne:</label>
 
@@ -48,7 +48,7 @@
     </select>
 
     <label>
-        <input type="checkbox" id="terms" required>
+        <input type="checkbox" id="terms">
         Jag godkänner <a href="terms.html">villkoren</a>
     </label>
 
@@ -58,10 +58,16 @@
 
     <p id="success"></p> 
 
-    <input type="text" required minlength="2" maxlength="50" pattern="^[a-zA-ZåäöÅÄÖ\s]+$">
+    <input type="text" minlength="2" maxlength="50" pattern="^[a-zA-ZåäöÅÄÖ\s]+$">
 
-    <input type="email" required>
+    <input type="email">
     <textarea required maxlength="250"></textarea>
+
+    <article>
+        <p class="miss">
+            jag missade att vi skulle sätta formulärprojektet i ett annat projekt så den har hamnat här...
+        </p>
+    </article>
 </main>
 
     <footer class="footer">
