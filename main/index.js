@@ -101,8 +101,6 @@ console.log(name, message);
 
 });
 
-
-const form = document.getElementById("contactForm");
 const errorDiv = document.getElementById("errorMessages");
 
 form.addEventListener("submit", function(event) {
