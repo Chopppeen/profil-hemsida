@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulär</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <main class="bakgrund">
+        <header class="rubrik">
+            <h1>
+                Kontakta oss
+            </h1>
+        </header>
+        
+
+        <form id="contactForm" class="contact-form"> 
+
+        <label for="name">Namn:</label> 
+            <input type="text" id="name" placeholder="Ditt Namn">
+
+        <label for="email">E-post:</label> 
+            <input type="email" id="email" placeholder="E-post">
+
+        <label for="message">Meddelande:</label> 
+            <textarea id="message" maxlength="250" placeholder="Skriv ditt meddelande här..."></textarea>
+
+        <label for="subject">Ämne:</label>
+
+        <select id="subject" required>
+            <option value="välj Ämne">välj Ämne</option>
+            <option value="Fråga">Fråga</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Annat">Annat</option>
+        </select>
+
+        <label>
+            <input type="checkbox" id="terms">
+            Jag godkänner <a href="terms.html">villkoren</a>
+        </label>
+
+        <button type="submit" class="submit-btn">Skicka</button> 
+    </form> 
+        <div id="errorMessages" style="color: red;"></div>
+
+        <p id="success"></p> 
+
+    </main>
+<footer class="footer">
+
+</footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
